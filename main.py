@@ -10,7 +10,7 @@ def main(
         username: str = None,
         password: str = None,
 ) -> None:
-    ftp = FTP(host)
+    ftp: FTP = FTP(host)
     ftp.encoding = 'utf-8'
     ftp.login(user=username, passwd=password)
     if method == 'get':
@@ -23,7 +23,7 @@ def main(
 
 
 if __name__ == '__main__':
-    parser = ArgumentParser()
+    parser: ArgumentParser = ArgumentParser()
     parser.add_argument(
         '--username',
         default=None,
